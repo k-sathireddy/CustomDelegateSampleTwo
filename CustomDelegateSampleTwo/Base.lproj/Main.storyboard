@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Pi5-oo-8bh">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="X50-9X-aEa">
+            <objects>
+                <viewController id="6xX-pt-rJC" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VNz-b4-a7E"/>
+                        <viewControllerLayoutGuide type="bottom" id="mPc-Ir-5vi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0ND-So-8uW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jhv-fz-khK">
+                                <state key="normal" title="First Button"/>
+                                <connections>
+                                    <action selector="firstButtonClicked:" destination="6xX-pt-rJC" eventType="touchUpInside" id="CXb-3i-scr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vb0-jB-w3L">
+                                <state key="normal" title="Second Button"/>
+                                <connections>
+                                    <action selector="secondButtonClicked:" destination="6xX-pt-rJC" eventType="touchUpInside" id="4wO-8p-fKu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Vb0-jB-w3L" firstAttribute="leading" secondItem="0ND-So-8uW" secondAttribute="leading" constant="74" id="0Vj-4g-wdR"/>
+                            <constraint firstAttribute="trailing" secondItem="Vb0-jB-w3L" secondAttribute="trailing" constant="74" id="TOg-Ts-enD"/>
+                            <constraint firstAttribute="trailing" secondItem="Jhv-fz-khK" secondAttribute="trailing" constant="74" id="UTk-Jd-tNw"/>
+                            <constraint firstItem="mPc-Ir-5vi" firstAttribute="top" secondItem="Vb0-jB-w3L" secondAttribute="bottom" constant="260" id="bkh-Nt-5oQ"/>
+                            <constraint firstItem="Jhv-fz-khK" firstAttribute="top" secondItem="VNz-b4-a7E" secondAttribute="bottom" constant="166" id="n1V-j2-cAr"/>
+                            <constraint firstItem="Jhv-fz-khK" firstAttribute="leading" secondItem="0ND-So-8uW" secondAttribute="leading" constant="74" id="s7b-PF-Ge2"/>
+                            <constraint firstItem="Vb0-jB-w3L" firstAttribute="top" secondItem="Jhv-fz-khK" secondAttribute="bottom" constant="117" id="sH7-Hr-hpp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="tX9-us-wl2"/>
+                    <connections>
+                        <outlet property="firstButton" destination="Jhv-fz-khK" id="ELw-kl-mHS"/>
+                        <outlet property="secondButton" destination="Vb0-jB-w3L" id="TaS-kC-ZAr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="avV-1p-3D6" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="854" y="162"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5Fh-gN-Kbj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pi5-oo-8bh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HtE-bJ-AGk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6xX-pt-rJC" kind="relationship" relationship="rootViewController" id="kcF-Ew-8rF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GB3-Kp-nfN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="162.3688155922039"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="w1U-yg-B0j">
+            <objects>
+                <viewController storyboardIdentifier="secondVC" id="3kU-rv-pcg" customClass="SecondViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wgb-sj-GXA"/>
+                        <viewControllerLayoutGuide type="bottom" id="fVk-np-dnP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JBp-4k-B0c">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="30s-z3-YVh">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="3kU-rv-pcg" id="fWP-k2-2XC"/>
+                                    <outlet property="delegate" destination="3kU-rv-pcg" id="vqn-6u-fcp"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="30s-z3-YVh" secondAttribute="trailing" id="B4i-Hv-1wz"/>
+                            <constraint firstItem="fVk-np-dnP" firstAttribute="top" secondItem="30s-z3-YVh" secondAttribute="bottom" id="XlW-ui-Qzt"/>
+                            <constraint firstItem="30s-z3-YVh" firstAttribute="top" secondItem="JBp-4k-B0c" secondAttribute="top" id="lpd-TG-gbv"/>
+                            <constraint firstItem="30s-z3-YVh" firstAttribute="leading" secondItem="JBp-4k-B0c" secondAttribute="leading" id="ziu-hw-r3f"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="colorsTableView" destination="30s-z3-YVh" id="VmG-wx-ajt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FHj-lW-Pjs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1567" y="162"/>
+        </scene>
+    </scenes>
+</document>
